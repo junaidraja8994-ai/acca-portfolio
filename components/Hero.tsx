@@ -1,96 +1,137 @@
 export default function Hero() {
     return (
-        <section className="mx-auto max-w-7xl px-6 py-32">
-            <div className="grid items-center gap-12 lg:grid-cols-2">
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-[#06142f] text-white">
+            {/* Background Glow */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[120px]" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-400/10 rounded-full blur-[100px]" />
 
-                {/* Left Content */}
-                <div>
+            <div className="container mx-auto px-6 py-20 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-                    <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-700">
-                        ACCA Finalist • Finance Professional
-                    </p>
+                    {/* Left Content */}
+                    <div>
+                        <p className="text-blue-400 font-semibold tracking-widest uppercase mb-5">
+                            Finance Professional | ACCA Finalist
+                        </p>
 
+                        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                            Building Financial Excellence Through
+                            <span className="text-blue-400"> Accuracy, Strategy & Technology</span>
+                        </h1>
 
-                    <h1 className="text-5xl font-bold leading-tight text-slate-900 lg:text-7xl">
-                        Junaid Banaras
-                    </h1>
+                        <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-xl">
+                            Assistant Manager Finance with hands-on experience managing
+                            large-scale payroll operations, financial reporting, compliance,
+                            and process improvement. Passionate about combining finance
+                            expertise with modern technology to create business impact.
+                        </p>
 
+                        <div className="flex flex-wrap gap-4">
+                            <a
+                                href="#contact"
+                                className="px-8 py-3 rounded-lg bg-blue-500 hover:bg-blue-600 transition font-semibold shadow-lg shadow-blue-500/30"
+                            >
+                                Contact Me
+                            </a>
 
-                    <h2 className="mt-5 text-2xl font-semibold text-slate-700">
-                        Assistant Manager Finance
-                    </h2>
+                            <a
+                                href="#projects"
+                                className="px-8 py-3 rounded-lg border border-blue-400 text-blue-300 hover:bg-blue-400 hover:text-white transition font-semibold"
+                            >
+                                View My Work
+                            </a>
+                        </div>
 
+                        {/* Quick Stats */}
+                        <div className="grid grid-cols-3 gap-6 mt-12 max-w-lg">
 
-                    <p className="mt-8 max-w-xl text-lg leading-8 text-slate-600">
-                        Finance professional specializing in payroll management,
-                        financial reporting, compliance, taxation, process improvement,
-                        and business intelligence.
-                    </p>
+                            <div>
+                                <h3 className="text-3xl font-bold text-blue-400">
+                                    3000+
+                                </h3>
+                                <p className="text-gray-400 text-sm">
+                                    Employees Payroll
+                                </p>
+                            </div>
 
+                            <div>
+                                <h3 className="text-3xl font-bold text-blue-400">
+                                    5+
+                                </h3>
+                                <p className="text-gray-400 text-sm">
+                                    Years Experience
+                                </p>
+                            </div>
 
-                    {/* Professional Highlights */}
-                    <div className="mt-6 flex flex-wrap gap-3">
+                            <div>
+                                <h3 className="text-3xl font-bold text-blue-400">
+                                    ACCA
+                                </h3>
+                                <p className="text-gray-400 text-sm">
+                                    Finalist
+                                </p>
+                            </div>
 
-                        <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700">
-                            📍 Islamabad, Pakistan
-                        </span>
-
-
-                        <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700">
-                            💼 Assistant Manager Finance
-                        </span>
-
-
-                        <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700">
-                            📊 3,000+ Payroll Managed
-                        </span>
-
+                        </div>
                     </div>
 
 
-                    {/* Buttons */}
-                    <div className="mt-10 flex flex-wrap gap-4">
+                    {/* Right Profile Card */}
+                    <div className="flex justify-center lg:justify-end">
+
+                        <div className="relative">
+
+                            <div className="absolute inset-0 bg-blue-500/30 blur-3xl rounded-full" />
+
+                            <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 w-[320px] md:w-[380px] shadow-2xl">
+
+                                <div className="h-64 rounded-2xl bg-gradient-to-br from-blue-900 to-blue-500 flex items-center justify-center mb-6">
+
+                                    <span className="text-7xl font-bold text-white/80">
+                                        JB
+                                    </span>
+
+                                </div>
 
 
-                        <button className="rounded-lg bg-slate-900 px-6 py-3 text-white transition hover:bg-slate-700">
-                            Download Resume
-                        </button>
+                                <h2 className="text-2xl font-bold">
+                                    Junaid Banaras
+                                </h2>
+
+                                <p className="text-blue-300 mt-2">
+                                    Assistant Manager Finance
+                                </p>
 
 
-                        <a
-                            href="https://www.linkedin.com/in/junaid-banaras-4221332a0/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="rounded-lg bg-blue-700 px-6 py-3 text-white transition hover:bg-blue-800"
-                        >
-                            View LinkedIn Profile
-                        </a>
+                                <div className="mt-6 space-y-3 text-sm text-gray-300">
 
+                                    <p>
+                                        ✓ Payroll Management
+                                    </p>
+
+                                    <p>
+                                        ✓ Financial Reporting
+                                    </p>
+
+                                    <p>
+                                        ✓ Tax & Compliance
+                                    </p>
+
+                                    <p>
+                                        ✓ Power BI & Finance Analytics
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
 
                     </div>
-
 
                 </div>
-
-
-
-                {/* Profile Image */}
-                <div className="flex justify-center">
-
-                    <div className="h-[500px] w-[380px] overflow-hidden rounded-2xl bg-slate-100 shadow-xl">
-
-                        <img
-                            src="/profile.jpg"
-                            alt="Junaid Banaras - ACCA Finance Professional"
-                            className="h-full w-full object-contain"
-                        />
-
-                    </div>
-
-                </div>
-
-
             </div>
+
         </section>
     );
 }
