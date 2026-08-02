@@ -10,23 +10,28 @@ export default function Hero() {
 
                     {/* Left Content */}
                     <div>
+
                         <p className="text-blue-400 font-semibold tracking-widest uppercase mb-5">
                             Finance Professional | ACCA Finalist
                         </p>
 
                         <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
                             Building Financial Excellence Through
-                            <span className="text-blue-400"> Accuracy, Strategy & Technology</span>
+                            <span className="text-blue-400">
+                                {" "}Accuracy, Strategy & Technology
+                            </span>
                         </h1>
 
                         <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-xl">
                             Assistant Manager Finance with hands-on experience managing
-                            large-scale payroll operations, financial reporting, compliance,
-                            and process improvement. Passionate about combining finance
-                            expertise with modern technology to create business impact.
+                            large-scale payroll operations, financial reporting,
+                            compliance, payroll strategy, and business intelligence.
+                            Passionate about delivering accurate financial solutions
+                            through technology and process improvement.
                         </p>
 
                         <div className="flex flex-wrap gap-4">
+
                             <a
                                 href="#contact"
                                 className="px-8 py-3 rounded-lg bg-blue-500 hover:bg-blue-600 transition font-semibold shadow-lg shadow-blue-500/30"
@@ -40,8 +45,10 @@ export default function Hero() {
                             >
                                 View My Work
                             </a>
+
                         </div>
 
+                        {/* Quick Stats */}
                         <div className="grid grid-cols-3 gap-6 mt-12 max-w-lg">
 
                             <div>
@@ -72,8 +79,8 @@ export default function Hero() {
                             </div>
 
                         </div>
-                    </div>
 
+                    </div>
 
                     {/* Right Profile Card */}
                     <div className="flex justify-center lg:justify-end">
@@ -84,11 +91,14 @@ export default function Hero() {
 
                             <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 w-[320px] md:w-[380px] shadow-2xl">
 
-                                <div className="h-64 rounded-2xl bg-gradient-to-br from-blue-900 to-blue-500 flex items-center justify-center mb-6">
+                                {/* Profile Image */}
+                                <div className="relative h-72 rounded-2xl overflow-hidden mb-6 border-2 border-white/10">
 
-                                    <span className="text-7xl font-bold text-white/80">
-                                        JB
-                                    </span>
+                                    <img
+                                        src="/profile.jpg"
+                                        alt="Junaid Banaras"
+                                        className="w-full h-full object-cover object-top"
+                                    />
 
                                 </div>
 
@@ -117,7 +127,6 @@ export default function Hero() {
 
                 </div>
             </div>
-
         </section>
     );
 }
