@@ -5,7 +5,7 @@ export default function Hero() {
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[120px]" />
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-400/10 rounded-full blur-[100px]" />
 
-            <div className="container mx-auto px-6 py-20 relative z-10">
+            <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
 
                     {/* Left Content */}
@@ -42,7 +42,6 @@ export default function Hero() {
                             </a>
                         </div>
 
-                        {/* Quick Stats */}
                         <div className="grid grid-cols-3 gap-6 mt-12 max-w-lg">
 
                             <div>
@@ -93,7 +92,6 @@ export default function Hero() {
 
                                 </div>
 
-
                                 <h2 className="text-2xl font-bold">
                                     Junaid Banaras
                                 </h2>
@@ -102,24 +100,12 @@ export default function Hero() {
                                     Assistant Manager Finance
                                 </p>
 
-
                                 <div className="mt-6 space-y-3 text-sm text-gray-300">
 
-                                    <p>
-                                        ✓ Payroll Management
-                                    </p>
-
-                                    <p>
-                                        ✓ Financial Reporting
-                                    </p>
-
-                                    <p>
-                                        ✓ Tax & Compliance
-                                    </p>
-
-                                    <p>
-                                        ✓ Power BI & Finance Analytics
-                                    </p>
+                                    <p>✓ Payroll Management</p>
+                                    <p>✓ Financial Reporting</p>
+                                    <p>✓ Tax & Compliance</p>
+                                    <p>✓ Power BI & Finance Analytics</p>
 
                                 </div>
 
