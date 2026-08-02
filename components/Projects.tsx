@@ -33,7 +33,7 @@ export default function Projects() {
     ];
 
     return (
-        <section className="bg-[#06142f] py-20 text-white">
+        <section id="projects" className="bg-[#06142f] py-20 text-white">
 
             <div className="container mx-auto px-6">
 
