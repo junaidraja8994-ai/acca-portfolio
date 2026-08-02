@@ -3,30 +3,28 @@ export default function Projects() {
         {
             title: "Large-Scale Payroll Management Operations",
             description:
-                "Managed end-to-end payroll operations for 3,000+ employees, ensuring accurate salary processing, compliance, and timely execution.",
-            impact: [
-                "3,000+ employee payroll management",
-                "Monthly salary processing and verification",
-                "Improved accuracy through process controls",
+                "Managed end-to-end payroll operations for 3,000+ employees, ensuring accurate salary processing, verification, compliance, and timely execution.",
+            achievements: [
+                "3,000+ employee monthly payroll management",
+                "Salary processing and verification controls",
+                "Improved accuracy through structured processes",
             ],
         },
-
         {
             title: "Overtime Processing & Workforce Analysis",
             description:
                 "Handled overtime calculations, attendance reconciliation, and workforce payment analysis for large employee groups.",
-            impact: [
-                "790+ overtime cases processed",
+            achievements: [
+                "790+ overtime payment cases processed",
                 "Attendance verification and reconciliation",
                 "Accurate compensation processing",
             ],
         },
-
         {
             title: "Finance Reporting & Business Intelligence",
             description:
-                "Applied financial analysis and reporting techniques to support management decisions and improve operational visibility.",
-            impact: [
+                "Developed reporting improvements using Excel and Power BI to provide better visibility into financial and operational data.",
+            achievements: [
                 "Power BI dashboard development",
                 "Financial data visualization",
                 "Improved reporting efficiency",
@@ -34,69 +32,81 @@ export default function Projects() {
         },
     ];
 
-
     return (
-        <section
-            id="projects"
-            className="mx-auto max-w-7xl px-6 py-24"
-        >
+        <section className="bg-[#06142f] py-20 text-white">
 
-            <div className="mb-12">
+            <div className="container mx-auto px-6">
 
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-700">
-                    Projects & Achievements
-                </p>
+                <div className="text-center mb-14">
 
-                <h2 className="mt-4 text-4xl font-bold text-slate-900">
-                    Delivering Financial Impact Through Experience
-                </h2>
+                    <p className="text-blue-400 font-semibold uppercase tracking-widest">
+                        Projects & Achievements
+                    </p>
 
-            </div>
+                    <h2 className="text-3xl md:text-5xl font-bold mt-3">
+                        Delivering Financial Impact Through Experience
+                    </h2>
 
-
-            <div className="grid gap-8 lg:grid-cols-3">
-
-                {projects.map((project) => (
-
-                    <div
-                        key={project.title}
-                        className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-                    >
-
-                        <h3 className="text-xl font-bold text-slate-900">
-                            {project.title}
-                        </h3>
+                </div>
 
 
-                        <p className="mt-5 leading-7 text-slate-600">
-                            {project.description}
-                        </p>
+                <div className="grid lg:grid-cols-3 gap-8">
 
 
-                        <ul className="mt-6 space-y-3">
+                    {projects.map((project, index) => (
 
-                            {project.impact.map((item) => (
+                        <div
+                            key={index}
+                            className="
+                            bg-white/10
+                            backdrop-blur-lg
+                            border
+                            border-white/20
+                            rounded-2xl
+                            p-8
+                            hover:-translate-y-2
+                            transition
+                            duration-300
+                            "
+                        >
 
-                                <li
-                                    key={item}
-                                    className="flex items-start text-slate-600"
-                                >
-
-                                    <span className="mr-3 mt-2 h-2 w-2 rounded-full bg-blue-700">
-                                    </span>
-
-                                    {item}
-
-                                </li>
-
-                            ))}
-
-                        </ul>
+                            <h3 className="text-xl font-bold text-blue-400 mb-4">
+                                {project.title}
+                            </h3>
 
 
-                    </div>
+                            <p className="text-gray-300 leading-relaxed mb-6">
+                                {project.description}
+                            </p>
 
-                ))}
+
+                            <div className="space-y-3">
+
+                                {project.achievements.map((item, i) => (
+
+                                    <p
+                                        key={i}
+                                        className="text-sm text-gray-200 flex gap-2"
+                                    >
+                                        <span className="text-blue-400">
+                                            ✓
+                                        </span>
+
+                                        {item}
+
+                                    </p>
+
+                                ))}
+
+                            </div>
+
+
+                        </div>
+
+                    ))}
+
+
+                </div>
 
             </div>
 
