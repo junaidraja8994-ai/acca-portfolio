@@ -36,7 +36,7 @@ export default function Skills() {
     ];
 
     return (
-        <section className="bg-white py-20 text-slate-900">
+        <section id="skills" className="bg-white py-20 text-slate-900">
 
             <div className="container mx-auto px-6">
 

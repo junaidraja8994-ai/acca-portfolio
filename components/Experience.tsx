@@ -1,6 +1,6 @@
 export default function Experience() {
     return (
-        <section className="bg-[#f8fafc] py-20 text-slate-900">
+        <section id="experience" className="bg-[#f8fafc} py-20 text-slate-900">
 
             <div className="container mx-auto px-6">
 
