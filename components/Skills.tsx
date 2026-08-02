@@ -11,7 +11,6 @@ export default function Skills() {
                 "Account Reconciliation",
             ],
         },
-
         {
             title: "Technology & Analytics",
             skills: [
@@ -23,7 +22,6 @@ export default function Skills() {
                 "Process Automation",
             ],
         },
-
         {
             title: "Professional Strengths",
             skills: [
@@ -37,58 +35,82 @@ export default function Skills() {
         },
     ];
 
-
     return (
-        <section
-            id="skills"
-            className="bg-slate-50 py-24"
-        >
-            <div className="mx-auto max-w-7xl px-6">
+        <section className="bg-white py-20 text-slate-900">
 
-                <div className="mb-12">
-                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-700">
+            <div className="container mx-auto px-6">
+
+                <div className="text-center mb-14">
+
+                    <p className="text-blue-600 font-semibold uppercase tracking-widest">
                         Skills & Expertise
                     </p>
 
-                    <h2 className="mt-4 text-4xl font-bold text-slate-900">
+                    <h2 className="text-3xl md:text-5xl font-bold mt-3">
                         Finance, Technology & Business Skills
                     </h2>
+
                 </div>
 
 
-                <div className="grid gap-8 lg:grid-cols-3">
+                <div className="grid md:grid-cols-3 gap-8">
 
-                    {skillGroups.map((group) => (
+                    {skillGroups.map((group, index) => (
+
                         <div
-                            key={group.title}
-                            className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"
+                            key={index}
+                            className="
+                            bg-slate-50
+                            rounded-2xl
+                            p-8
+                            border
+                            hover:shadow-xl
+                            transition
+                            duration-300
+                            "
                         >
 
-                            <h3 className="text-xl font-bold text-slate-900">
+                            <h3 className="text-xl font-bold text-blue-600 mb-6">
                                 {group.title}
                             </h3>
 
 
-                            <ul className="mt-6 space-y-3">
+                            <div className="space-y-3">
 
-                                {group.skills.map((skill) => (
-                                    <li
-                                        key={skill}
-                                        className="flex items-center text-slate-600"
+                                {group.skills.map((skill, i) => (
+
+                                    <div
+                                        key={i}
+                                        className="
+                                        flex
+                                        items-center
+                                        gap-3
+                                        text-slate-700
+                                        "
                                     >
-                                        <span className="mr-3 h-2 w-2 rounded-full bg-blue-700"></span>
-                                        {skill}
-                                    </li>
+
+                                        <span className="text-blue-500 font-bold">
+                                            ✓
+                                        </span>
+
+                                        <span>
+                                            {skill}
+                                        </span>
+
+                                    </div>
+
                                 ))}
 
-                            </ul>
+                            </div>
 
                         </div>
+
                     ))}
 
                 </div>
 
             </div>
+
         </section>
     );
 }
