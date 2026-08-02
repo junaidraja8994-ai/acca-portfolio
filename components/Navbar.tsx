@@ -1,49 +1,100 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Navbar() {
+    const [open, setOpen] = useState(false);
+
+    const links = [
+        { name: "About", href: "#about" },
+        { name: "Experience", href: "#experience" },
+        { name: "Skills", href: "#skills" },
+        { name: "Projects", href: "#projects" },
+        { name: "Education", href: "#education" },
+        { name: "Contact", href: "#contact" },
+    ];
+
     return (
-        <nav className="fixed top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur">
-            <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+        <nav className="fixed top-0 w-full z-50 bg-[#06142f]/90 backdrop-blur-lg border-b border-white/10">
 
-                {/* Logo */}
-                <div>
-                    <h1 className="text-xl font-bold text-slate-900">
-                        Junaid Banaras
-                    </h1>
-                    <p className="text-xs text-slate-500">
-                        ACCA Finalist | Finance Professional
-                    </p>
+            <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+
+                <a
+                    href="#"
+                    className="text-2xl font-bold text-white"
+                >
+                    Junaid<span className="text-blue-400">.</span>
+                </a>
+
+
+                {/* Desktop Menu */}
+                <div className="hidden md:flex items-center gap-8">
+
+                    {links.map((link) => (
+                        <a
+                            key={link.name}
+                            href={link.href}
+                            className="text-gray-300 hover:text-blue-400 transition font-medium"
+                        >
+                            {link.name}
+                        </a>
+                    ))}
+
+
+                    <a
+                        href="/Junaid-Banaras-Resume.pdf"
+                        target="_blank"
+                        className="px-5 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 transition text-white font-semibold"
+                    >
+                        Resume
+                    </a>
+
                 </div>
 
 
-                {/* Menu */}
-                <div className="hidden gap-8 text-sm font-medium text-slate-700 md:flex">
-                    <a href="#about" className="hover:text-blue-700">
-                        About
-                    </a>
-
-                    <a href="#experience" className="hover:text-blue-700">
-                        Experience
-                    </a>
-
-                    <a href="#skills" className="hover:text-blue-700">
-                        Skills
-                    </a>
-
-                    <a href="#projects" className="hover:text-blue-700">
-                        Projects
-                    </a>
-
-                    <a href="#contact" className="hover:text-blue-700">
-                        Contact
-                    </a>
-                </div>
-
-
-                {/* Button */}
-                <button className="rounded-lg bg-slate-900 px-5 py-2 text-sm font-medium text-white hover:bg-slate-700">
-                    Resume
+                {/* Mobile Button */}
+                <button
+                    onClick={() => setOpen(!open)}
+                    className="md:hidden text-white text-3xl"
+                >
+                    ☰
                 </button>
 
+
             </div>
+
+
+            {/* Mobile Menu */}
+            {open && (
+
+                <div className="md:hidden bg-[#06142f] px-6 pb-6">
+
+                    {links.map((link) => (
+
+                        <a
+                            key={link.name}
+                            href={link.href}
+                            onClick={() => setOpen(false)}
+                            className="block py-3 text-gray-300 hover:text-blue-400"
+                        >
+                            {link.name}
+                        </a>
+
+                    ))}
+
+
+                    <a
+                        href="/Junaid-Banaras-Resume.pdf"
+                        target="_blank"
+                        className="inline-block mt-3 px-5 py-2 rounded-lg bg-blue-500 text-white font-semibold"
+                    >
+                        Resume
+                    </a>
+
+                </div>
+
+            )}
+
         </nav>
     );
 }
