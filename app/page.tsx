@@ -1,3 +1,6 @@
+import Contact from "@/components/Contact";
+<Education />
+<Contact />
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
