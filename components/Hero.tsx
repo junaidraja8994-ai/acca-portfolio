@@ -95,7 +95,7 @@ export default function Hero() {
                                 <div className="relative h-72 rounded-2xl overflow-hidden mb-6 border-2 border-white/10">
 
                                     <img
-                                        src="/junaid-profile.jpg"
+                                        src="/junaid-profile.jpeg"
                                         alt="Junaid Banaras"
                                         className="w-full h-full object-cover object-top"
                                     />
